@@ -8,7 +8,6 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
-import android.os.PowerManager;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
@@ -19,8 +18,6 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 import java.util.List;
-
-import static android.content.Context.POWER_SERVICE;
 
 public class RNInvokeApp extends ReactContextBaseJavaModule {
 
@@ -56,16 +53,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
 
             activityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent
             .FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-
-            PowerManager powerManager = (PowerManager) reactContext.getSystemService(POWER_SERVICE);
-            PowerManager.WakeLock wakeLock = powerManager.newWakeLock((PowerManager.PARTIAL_WAKE_LOCK | PowerManager
-            .ACQUIRE_CAUSES_WAKEUP), "TAG");
-
-            wakeLock.acquire();
-
-            reactContext.startActivity(activityIntent);
-
-            wakeLock.release();
+            startActivity(activityIntent);
         } catch(Exception e) {
             Log.e(LOG_TAG, "Class not found", e);
             return;
