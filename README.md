@@ -9,11 +9,18 @@
 - App is in background
 - App is not running
 
+NOTION: this library is forked from [this repo](https://github.com/vicke4/react-native-invoke-app). In this repo, in file MainActivity, Intent Activity has FLAG_ACTIVITY_NEW_TASK instead FLAG_ACTIVITY_SINGLE_TOP. Keep in mind it for your developing
+
 ## Installation
 
 ```
-$ npm install --save react-native-invoke-app
-$ react-native link react-native-invoke-app
+first step
+$ npm install --save @suvorovr/react-native-invoke-app
+or (for yarn)
+$ yarn add @suvorovr/react-native-invoke-app
+
+second step
+$ npx @suvorovr/react-native-invoke-app link
 ```
 
 ## Usage
