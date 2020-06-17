@@ -1,7 +1,7 @@
 {
   "name": "@suvorovr/react-native-invoke-app",
   "description": "[![npm version](https://badge.fury.io/js/react-native-invoke-app.svg)](https://badge.fury.io/js/react-native-invoke-app)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "index.js",
   "author": "Roman Suvorov <roma232789@gmail.com>",
