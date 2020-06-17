@@ -43,8 +43,8 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
             bundle = Arguments.toBundle(data);
         }
 
-//         String packageName = reactContext.getPackageName();
-        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage("com.simia_mobile");
+        String packageName = reactContext.getPackageName();
+        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage(packageName);
         String className = launchIntent.getComponent().getClassName();
 
         try {
@@ -59,9 +59,9 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
             return;
         }
 
-        if (isAppOnForeground(reactContext)) {
+//         if (isAppOnForeground(reactContext)) {
             sendEvent();
-        }
+//         }
     }
 
     public static void sendEvent() {
