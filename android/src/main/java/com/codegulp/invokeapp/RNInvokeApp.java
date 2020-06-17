@@ -44,7 +44,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
         }
 
 //         String packageName = reactContext.getPackageName();
-        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage('com.simia_mobile');
+        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage("com.simia_mobile");
         String className = launchIntent.getComponent().getClassName();
 
         try {
