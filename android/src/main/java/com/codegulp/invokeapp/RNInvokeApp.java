@@ -43,7 +43,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
             Log.d(LOG_TAG, key + " = \"" + bundle.get(key) + "\"");
         }
         if (data != null) {
-            bundle = Arguments.toBundle(toStingdata);
+            bundle = Arguments.toBundle(data);
         }
 
         String packageName = reactContext.getPackageName();
