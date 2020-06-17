@@ -40,7 +40,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
         ReadableMap data = params.hasKey("data") ? params.getMap("data") : null;
 
         for (String key: bundle.keySet()) {
-            Log.d(LOG_TAG, key + " = \"" + bundle.get(key) + "\"")
+            Log.d(LOG_TAG, key + " = \"" + bundle.get(key) + "\"");
         }
         if (data != null) {
             bundle = Arguments.toBundle(toStingdata);
