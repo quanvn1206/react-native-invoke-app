@@ -43,8 +43,8 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
             bundle = Arguments.toBundle(data);
         }
 
-        String packageName = reactContext.getPackageName();
-        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage(packageName);
+//         String packageName = reactContext.getPackageName();
+        Intent launchIntent = reactContext.getPackageManager().getLaunchIntentForPackage('com.simia_mobile');
         String className = launchIntent.getComponent().getClassName();
 
         try {
@@ -53,7 +53,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
 
             activityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent
             .FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(activityIntent);
+            reactContext.startActivity(activityIntent);
         } catch(Exception e) {
             Log.e(LOG_TAG, "Class not found", e);
             return;
