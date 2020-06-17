@@ -37,6 +37,7 @@ public class RNInvokeApp extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void invokeApp(ReadableMap params) {
+        Log.d('HAS_KEY_PARAM', params.hasKey("data"))
         ReadableMap data = params.hasKey("data") ? params.getMap("data") : null;
 
         for (String key: bundle.keySet()) {
