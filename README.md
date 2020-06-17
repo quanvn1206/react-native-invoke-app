@@ -9,7 +9,7 @@
 - App is in background
 - App is not running
 
-NOTION: this library is forked from https://github.com/vicke4/react-native-invoke-app. In this repo, in file MainActivity, Intent Activity has FLAG_ACTIVITY_NEW_TASK instead FLAG_ACTIVITY_SINGLE_TOP. Keep in mind it for your developing
+NOTION: this library is forked from [this repo](https://github.com/vicke4/react-native-invoke-app). In this repo, in file MainActivity, Intent Activity has FLAG_ACTIVITY_NEW_TASK instead FLAG_ACTIVITY_SINGLE_TOP. Keep in mind it for your developing
 
 ## Installation
 
